@@ -1,0 +1,16 @@
+.hello {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 25px;
+    margin: 10px 0;
+}
+
+.uk-form-icon:not(.uk-form-icon-flip) ~ .uk-textarea {
+    padding-left: 40px;
+}
+.uk-form-icon-pencil {
+    bottom: initial;
+    margin: 0;
+    width: 40px;
+    vertical-align: middle;
+}
