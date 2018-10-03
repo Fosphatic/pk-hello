@@ -38,7 +38,7 @@ return [
      */
     'autoload' => [
 
-        'Pagekit\\Hello\\' => 'src'
+        'Fosphatic\\Hello\\' => 'src'
 
     ],
 
@@ -58,7 +58,7 @@ return [
             'label' => 'Hello',
 
             // The controller for this node. Each controller action will be mounted
-            'controller' => 'Pagekit\\Hello\\Controller\\SiteController',
+            'controller' => 'Fosphatic\\Hello\\Controller\\SiteController',
 
             // A unique node that cannot be deleted, resides in "Not Linked" by default
             'protected' => true
@@ -76,7 +76,7 @@ return [
         '/hello' => [
             'name' => '@hello/admin',
             'controller' => [
-                'Pagekit\\Hello\\Controller\\HelloController'
+                'Fosphatic\\Hello\\Controller\\HelloController'
             ]
         ]
 
@@ -164,7 +164,8 @@ return [
         'view.scripts' => function ($event, $scripts) {
             $scripts->register('hello-link', 'hello:app/bundle/link.js', '~panel-link');
             $scripts->register('hello-dashboard', 'hello:app/bundle/dashboard.js', '~dashboard');
-
+            $scripts->add('vue-form-generator', 'hello:app/bundle/generator.js', 'generator');
+            $scripts->add('form-generator', 'hello:assets/js/vue-form-generator.js', ['vue']);
         }
 
     ]

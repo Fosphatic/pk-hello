@@ -3,9 +3,9 @@ module.exports = {
     el: '#hello',
 
     data: {
-        name: '',
-        email: '',
-        message: '',
+        name: {},
+        email: {},
+        message: {},
         error: null
     },
 

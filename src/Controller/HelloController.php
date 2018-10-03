@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Hello\Controller;
+namespace Fosphatic\Hello\Controller;
 
 use Pagekit\Application as App;
 
