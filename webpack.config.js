@@ -3,6 +3,7 @@ module.exports = [
     {
         entry: {
             "settings": "./app/views/settings.js",
+            "hello": "./app/views/hello.js",
             "link": "./app/components/link.vue",
             "dashboard": "./app/components/dashboard.vue"
         },

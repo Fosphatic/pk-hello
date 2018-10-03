@@ -6,11 +6,12 @@
 }
 
 .uk-form-icon:not(.uk-form-icon-flip) ~ .uk-textarea {
-    padding-left: 40px;
+    padding-left: 40px !important;
 }
 .uk-form-icon-pencil {
-    bottom: initial;
-    margin: 0;
-    width: 40px;
-    vertical-align: middle;
+    bottom: initial !important;
+    margin: 0 !important;
+    width: 40px !important;
+    vertical-align: middle !important;
+    padding-top: 7px !important;
 }
