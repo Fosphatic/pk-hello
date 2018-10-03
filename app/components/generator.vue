@@ -69,7 +69,7 @@ var vm = new Vue({
 					type: "textArea",
 					label: "Message",
 					model: "message",
-          message: "Message"
+          message: "Message",
           hint: "Max 500 characters",
 					max: 500,
 					placeholder: "Message",
