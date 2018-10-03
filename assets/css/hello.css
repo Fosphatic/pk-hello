@@ -15,3 +15,6 @@
     vertical-align: middle !important;
     padding-top: 7px !important;
 }
+.uk-input:focus, .uk-select:focus, .uk-textarea:focus {
+    border-color: unset !important;
+}

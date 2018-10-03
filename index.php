@@ -164,8 +164,6 @@ return [
         'view.scripts' => function ($event, $scripts) {
             $scripts->register('hello-link', 'hello:app/bundle/link.js', '~panel-link');
             $scripts->register('hello-dashboard', 'hello:app/bundle/dashboard.js', '~dashboard');
-            $scripts->add('vue-form-generator', 'hello:app/bundle/generator.js', 'generator');
-            $scripts->add('form-generator', 'hello:assets/js/vue-form-generator.js', ['vue']);
         }
 
     ]

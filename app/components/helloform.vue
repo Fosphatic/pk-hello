@@ -1,16 +1,9 @@
-<template lang='html'>
-  <div id='helloform'>
-    <form class="uk-form uk-form-stacked uk-width-1-2@m uk-width-1-3@l uk-container uk-container-small uk-container-center uk-text-center">
-      <vue-form-generator :schema='schema' :model='model' :options='formOptions'></vue-form-generator>
-    </form>
-  </div>
-</template>
 <script>
 
 var VueFormGenerator = window.VueFormGenerator;
 
 var vm = new Vue({
-	el: "#helloform",
+	el: "#hello-form",
 	components: {
 		"vue-form-generator": VueFormGenerator.component
 	},
@@ -43,7 +36,8 @@ var vm = new Vue({
 		model: {
 			name: "John Doe",
 			email: "john.doe@gmail.com",
-			status: true
+      message: "Message",
+			status: false
 		},
 		schema: {
 			fields: [
@@ -51,8 +45,8 @@ var vm = new Vue({
 					type: "text",
 					label: "Name",
 					model: "name",
+          name: "John Doe",
 					readonly: false,
-					featured: true,
 					required: true,
 					disabled: false,
 					placeholder: "Name",
@@ -62,21 +56,26 @@ var vm = new Vue({
 					type: "email",
 					label: "E-mail",
 					model: "email",
-					placeholder: "User's e-mail address",
+          placeholder: "User's e-mail address",
 					validator: VueFormGenerator.validators.email
 				},
 				{
 					type: "textArea",
 					label: "Message",
 					model: "message",
-          message: "Message",
           hint: "Max 500 characters",
 					max: 500,
 					placeholder: "Message",
 					rows: 4,
           required: true,
 					validator: VueFormGenerator.validators.string
-				}
+				},
+        {
+					type: "submit",
+					label: "",
+					buttonText: "Submit",
+					validateBeforeSubmit: true
+        }
 			]
 		},
 
