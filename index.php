@@ -78,8 +78,13 @@ return [
             'controller' => [
                 'Fosphatic\\Hello\\Controller\\HelloController'
             ]
+        ],
+        '/hello/sendmail' => [
+            'name' => '@hello/sendmail',
+            'controller' => [
+                'Fosphatic\\Hello\\Controller\\HelloMailController'
+            ]
         ]
-
     ],
 
     /*
@@ -164,6 +169,9 @@ return [
         'view.scripts' => function ($event, $scripts) {
             $scripts->register('hello-link', 'hello:app/bundle/link.js', '~panel-link');
             $scripts->register('hello-dashboard', 'hello:app/bundle/dashboard.js', '~dashboard');
+        },
+        'site' => function($event , $app){
+            $app->scripts('helloMail' , 'hello:app/views/mail.js' , ['vue']);
         }
 
     ]
